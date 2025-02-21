@@ -1,8 +1,15 @@
 package com.tienda.domain;
 
-import jakarta.persitence.*;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import java.io.Serializable;
 import lombok.Data;
+
 
 @Data //Generar por debajo los set y get
 @Entity
@@ -11,7 +18,7 @@ public class Categoria implements Serializable{
     
     private static final long serialVersionUID = 1L;
     
-    @id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_categoria")
     private Long idCategoria;
