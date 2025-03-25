@@ -81,4 +81,13 @@ public class PruebasController {
         model.addAttribute("precioSup", precioSup);
         return "/pruebas/listado2";
     }
+
+    @PostMapping("/query4")
+    public String consultaQuery4(@RequestParam(value = "precioSup") double precioSup, Model model) {
+        var productos = productoService.MenorIgualQue(precioSup);
+        model.addAttribute("productos", productos);
+        model.addAttribute("totalProductos", productos.size());
+        model.addAttribute("precioSup", precioSup);
+        return "/pruebas/listado2";
+    }
 }

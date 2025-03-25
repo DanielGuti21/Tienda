@@ -72,4 +72,11 @@ public class ProductoServiceImpl implements ProductoService {
         return productoDao.metodoNativo(precioInf, precioSup);
     }
 
+    @Override
+    public List<Producto> MenorIgualQue(double precioSup) {
+        return productoDao.MenorIgualQue(precioSup);
+    }
+
+
+
 }
